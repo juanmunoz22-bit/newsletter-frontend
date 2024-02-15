@@ -14,6 +14,12 @@ dependencies:
   react-dom:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
+  react-email-editor:
+    specifier: ^1.7.9
+    version: 1.7.9(react@18.2.0)
+  react-hook-form:
+    specifier: ^7.50.1
+    version: 7.50.1(react@18.2.0)
   react-router-dom:
     specifier: ^6.22.0
     version: 6.22.0(react-dom@18.2.0)(react@18.2.0)
@@ -1953,6 +1959,25 @@ packages:
       scheduler: 0.23.0
     dev: false
 
+  /react-email-editor@1.7.9(react@18.2.0):
+    resolution: {integrity: sha512-ALsGS1E/oAzgWDDbFFxJ8Y8QCx7ZJK46aEi/w7Ydgs62+83sQjwr0pTzyTapWZnACWTv3wCLDDFqateui1YYJQ==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=15'
+    dependencies:
+      react: 18.2.0
+      unlayer-types: 1.5.64
+    dev: false
+
+  /react-hook-form@7.50.1(react@18.2.0):
+    resolution: {integrity: sha512-3PCY82oE0WgeOgUtIr3nYNNtNvqtJ7BZjsbxh6TnYNbXButaD5WpjOmTjdxZfheuHKR68qfeFnEDVYoSSFPMTQ==}
+    engines: {node: '>=12.22.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /react-refresh@0.14.0:
     resolution: {integrity: sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==}
     engines: {node: '>=0.10.0'}
@@ -2242,6 +2267,10 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
+
+  /unlayer-types@1.5.64:
+    resolution: {integrity: sha512-FHakeQvYBq7EEJME51os5dxj77fRqI+tugwhECWo3YMauwPxnSv6OuuxlFvC1A9pvi4YUUpYkTfJ8uTV3HGEXw==}
+    dev: false
 
   /update-browserslist-db@1.0.13(browserslist@4.23.0):
     resolution: {integrity: sha512-xebP81SNcPuNpPP3uzeW1NYXxI3rxyJzF3pD6sH4jE7o/IX+WtSpwnVU+qIsDPyk0d3hmFQ7mjqc6AtV604hbg==}
