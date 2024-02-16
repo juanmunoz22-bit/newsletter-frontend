@@ -20,6 +20,9 @@ dependencies:
   react-hook-form:
     specifier: ^7.50.1
     version: 7.50.1(react@18.2.0)
+  react-multi-email:
+    specifier: ^1.0.21
+    version: 1.0.21(react-dom@18.2.0)(react@18.2.0)
   react-router-dom:
     specifier: ^6.22.0
     version: 6.22.0(react-dom@18.2.0)(react@18.2.0)
@@ -1976,6 +1979,16 @@ packages:
       react: ^16.8.0 || ^17 || ^18
     dependencies:
       react: 18.2.0
+    dev: false
+
+  /react-multi-email@1.0.21(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-IRp7b1lXfkJa5bmOobul+XjkMogwzsiXNy/K2ZvqFX9l/aihI+XA9jSbwgOORkMQ+blQ7vOf+wpEt5V1jU1OyQ==}
+    peerDependencies:
+      react: ^18.2.0
+      react-dom: ^18.2.0
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /react-refresh@0.14.0:

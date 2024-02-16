@@ -1,10 +1,10 @@
 import React from "react";
 
-const Button = ({ children, className }) => {
+const Button = ({ children, className, onClick }) => {
   return (
     <a
       className={className}
-      href="#"
+      onClick={onClick}
     >
       {children}
     </a>

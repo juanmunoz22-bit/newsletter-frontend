@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import { useFormState } from "../../../hooks/useFormState";
 
 import Input from "../../../components/Input";
@@ -6,19 +7,23 @@ import FormButton from "../../../components/FormButton";
 import Form from "../../../components/Form";
 
 const Info = () => {
-  const { state, setState } = useFormState();
+  const [ state, setState ] = useFormState();
+
+  const navigate = useNavigate();
 
   const {
     register,
     handleSubmit,
   } = useForm({ defaultValues: state, mode: "onSubmit" });
 
-  const saveData = (data) => {
+  const onSubmit = (data) => {
     setState({ ...state, ...data });
+    console.log(data);
+    navigate("/builder");
   };
 
   return (
-    <Form onSubmit={handleSubmit(saveData)} nextStep="/builder">
+    <Form onSubmit={handleSubmit(onSubmit)}>
       <fieldset>
         <div className="flex flex-col mt-6 items-center justify-center">
           <h1 className="text-4xl font-bold text-center">
@@ -28,17 +33,17 @@ const Info = () => {
             <Input
               children="Name"
               inputId="name"
-              {...register("name", { required: true })}
+              {...register("name", { required: false })}
             />
             <Input
               children="Description"
               inputId="description"
-              {...register("description", { required: true })}
+              {...register("description", { required: false })}
             />
             <Input
               children="Category"
               inputId="category"
-              {...register("category", { required: true })}
+              {...register("category", { required: false })}
             />
           </div>
           <FormButton

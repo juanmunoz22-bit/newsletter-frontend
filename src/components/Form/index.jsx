@@ -1,16 +1,6 @@
-import { useNavigate } from "react-router-dom";
-
-const Form = ({ children, onSubmit, nextStep}) => {
-  const navigate = useNavigate();
-
-  const onSubmitCustom = (e) => {
-    e.preventDefault();
-    onSubmit();
-    navigate(nextStep);
-  };
-
+const Form = ({ children, ...props}) => {
   return (
-    <form onSubmit={onSubmitCustom} noValidate>
+    <form {...props} noValidate>
       {children}
     </form>
   );
