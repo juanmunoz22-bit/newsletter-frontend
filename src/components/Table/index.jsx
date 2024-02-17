@@ -15,7 +15,7 @@ const Table = () => {
             <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Name</th>
             <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Description</th>
             <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Subject</th>
-            <th className="px-4 py-2">Actions</th>
+            <th className="px-4 py-2 flex items-center"><span>Actions</span></th>
           </tr>
         </thead>
 
