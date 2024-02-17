@@ -42,7 +42,7 @@ const EmailBuilder = () => {
         <fieldset className='flex flex-col items-center'>
           <div className="flex flex-col mt-6 items-center justify-center">
             <h1 className="text-4xl font-bold text-center">
-              Newsletter Template Generator
+              Newsletter Creator
             </h1>
             <EmailEditor
               ref={emailEditorRef}

@@ -27,12 +27,21 @@ const Confirm = () => {
     setValue,
   } = useForm({ defaultValues: state });
 
-  const submitData = (data) => {
+  const submitData = async (data) => {
     setState({ ...state, ...data });
-    // timeout to simulate async call
-    setTimeout(() => {
-      console.log(data);
-    }, 1000);
+    // call API to save data
+
+    const response = await fetch('http://localhost:8080/api/v1/newsletter/create', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+
+    const res = await response.json();
+    console.log(res);
+
   };
 
   return (
@@ -40,7 +49,7 @@ const Confirm = () => {
       <fieldset>
         <div className="flex flex-col mt-6 items-center justify-center">
           <h1 className="text-4xl font-bold text-center">
-            Newsletter Template Generator
+            Newsletter Creator
           </h1>
           <div className="flex flex-col h-80 justify-center gap-10 mt-6 w-96">
             <Input
