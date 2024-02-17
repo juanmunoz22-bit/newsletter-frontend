@@ -18,7 +18,6 @@ const Info = () => {
 
   const onSubmit = (data) => {
     setState({ ...state, ...data });
-    console.log(data);
     navigate("/builder");
   };
 
@@ -27,7 +26,7 @@ const Info = () => {
       <fieldset>
         <div className="flex flex-col mt-6 items-center justify-center">
           <h1 className="text-4xl font-bold text-center">
-            Newsletter Template Generator
+            Newsletter Creator
           </h1>
           <div className="flex flex-col h-80 justify-center gap-10 mt-6">
             <Input
