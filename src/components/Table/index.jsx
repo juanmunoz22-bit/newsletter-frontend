@@ -7,6 +7,13 @@ const Table = () => {
 
   const context = useContext(CampaignContext)
 
+  const handleSend = (id) => {
+    fetch(`http://localhost:8080/api/v1/newsletter/send/${id}`, {
+      method: 'POST'
+    })
+      .then(response => response.json())
+  }
+
   return (
     <div className="overflow-x-auto">
       <table className="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
@@ -27,6 +34,7 @@ const Table = () => {
               name={item.name}
               description={item.description}
               subject={item.subject}
+              handleSend={handleSend}
             />
           ))}
         </tbody>

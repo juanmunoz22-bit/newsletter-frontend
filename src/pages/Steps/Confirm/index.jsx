@@ -91,7 +91,7 @@ const Confirm = () => {
               onClick={() => navigate('/builder')}
             />
             <FormButton
-              children="Send email"
+              children="Save"
               className="inline-block rounded border bg-teal-600 border-teal-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-teal-600 focus:outline-none active:text-teal-500 mt-6"
             />
           </div>

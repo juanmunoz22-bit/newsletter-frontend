@@ -5,7 +5,7 @@ const Sidebar = () => {
         <ul className="flex flex-col space-y-1 pt-4 gap-4">
           <li>
             <a
-              href="/"
+              href="/info"
               className="group relative flex justify-center rounded px-2 py-1.5 text-gray-500 hover:bg-gray-50 hover:text-gray-700"
             >
               <svg
