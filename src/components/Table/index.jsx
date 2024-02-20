@@ -7,11 +7,15 @@ const Table = () => {
 
   const context = useContext(CampaignContext)
 
-  const handleSend = (id) => {
-    fetch(`http://localhost:8080/api/v1/newsletter/send/${id}`, {
+  const handleSend = async (id) => {
+    const response = await fetch(`http://localhost:8080/api/v1/newsletter/send/${id}`, {
       method: 'POST'
     })
-      .then(response => response.json())
+      
+    if (response.status === 200) {
+      alert('Email sent successfully')
+    }
+      
   }
 
   return (

@@ -14,15 +14,7 @@ const TableItem = (props) => {
         >
           Send
         </a>
-      </td>
-      <td className="whitespace-nowrap px-4 py-2">
-        <a
-          href="#"
-          className="inline-block rounded bg-teal-600 px-4 py-2 text-xs font-medium text-white hover:bg-teal-700"
-        >
-          Edit
-        </a>
-      </td>
+      </td>    
     </tr>
   )
 }

@@ -4,7 +4,7 @@ const Home = () => {
       <h1 className="text-4xl font-bold text-center mt-10">
         Stori Newsletters
       </h1>
-      <div className="flex items-center justify-center gap-4 px-56 mt-14">
+      <div className="flex flex-wrap items-center justify-center gap-10 mt-14 sm:flex sm:px-10">
         <article className="overflow-hidden rounded-lg shadow transition hover:shadow-lg">
 
           <img

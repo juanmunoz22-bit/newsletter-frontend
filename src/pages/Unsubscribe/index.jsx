@@ -1,7 +1,11 @@
+import { useNavigate } from "react-router-dom"
+
 import FormButton from "../../components/FormButton";
 import Form from "../../components/Form";
 
 const Unsubscribe = () => {
+
+  const navigate = useNavigate();
 
   const handleSubmit = async () => {
     // call API to unsubscribe
@@ -9,6 +13,10 @@ const Unsubscribe = () => {
     const response = await fetch(`http://localhost:8080/api/v1/newsletter/unsubscribe/${email}`, {
       method: 'POST',
     }).then(response => response.json());
+
+    if (response.status === 'success') {
+      navigate('/');
+    }
   }
 
   return (
@@ -24,7 +32,7 @@ const Unsubscribe = () => {
             <FormButton children="Confirm"
               className="inline-block rounded border bg-teal-700 border-teal-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-teal-600 focus:outline-none active:text-teal-500 mt-6" />
           </div>
-          
+
         </div>
       </section>
     </Form>
