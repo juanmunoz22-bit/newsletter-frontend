@@ -31,7 +31,13 @@ const EmailBuilder = () => {
   };
 
   const onSubmit = async () => {
-    const html = await exportHtml();
+    let html = await exportHtml();
+    html += `
+        <div style="text-align: center; margin-top: 20px;">
+            <span style="font-size: small;">Don't want to receive these emails anymore?</span>
+            <a href="UNSUBSCRIBE_LINK" style="font-size: small; text-decoration: none; color: blue;">Unsubscribe</a>
+        </div>
+    `;
     setState({ ...state, html: html });
     navigate("/confirm");
   };
@@ -52,7 +58,7 @@ const EmailBuilder = () => {
             <Button
               children="Back"
               className="inline-block rounded border bg-teal-600 border-teal-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-teal-600 focus:outline-none active:text-teal-500 mt-6 cursor-pointer"
-              onClick={() => navigate('/')}
+              onClick={() => navigate('/info')}
             />
             <FormButton
               children="Next"
